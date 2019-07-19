@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Api Simpson</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="consultar">Consultar</string>
+    <string name="nameCharacter">Personaje</string>
+    <string name="nameApi">Api Simpson</string>
+</resources>

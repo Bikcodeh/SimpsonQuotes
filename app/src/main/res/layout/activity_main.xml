@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/MyToolbarStyle"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLeftCen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideRightCen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+
+    <Spinner
+        android:id="@+id/spinnerNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/botonConsultar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/guideLeftCen"
+        app:layout_constraintRight_toLeftOf="@id/guideRightCen"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintVertical_bias="0.688" />
+
+
+    <Button
+        android:id="@+id/botonConsultar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/consultar"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/guideLeft"
+        app:layout_constraintRight_toLeftOf="@id/guideRight"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintVertical_bias="0.348" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cajaFrases"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/guideLeft"
+        app:layout_constraintRight_toLeftOf="@id/guideRight"
+        app:layout_constraintTop_toBottomOf="@id/botonConsultar"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:scrollbars="vertical"
+        android:focusable="true">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccione el numero de frases"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerNum"
+        app:layout_constraintEnd_toStartOf="@+id/guideRight"
+        app:layout_constraintStart_toStartOf="@+id/guideLeft"
+        app:layout_constraintTop_toTopOf="@+id/guideTop" />
+
+
+</android.support.constraint.ConstraintLayout>
